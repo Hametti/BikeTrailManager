@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeTrailManager", "BikeTrailManager\BikeTrailManager.csproj", "{982C7DBE-C23E-4AE5-96EB-4F8944BE4B26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeTrailManager.UnitTests", "BikeTrailManager.UnitTests\BikeTrailManager.UnitTests.csproj", "{28083E96-304A-4A5B-8D4F-EE8DB3A2727F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{982C7DBE-C23E-4AE5-96EB-4F8944BE4B26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{982C7DBE-C23E-4AE5-96EB-4F8944BE4B26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{982C7DBE-C23E-4AE5-96EB-4F8944BE4B26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{982C7DBE-C23E-4AE5-96EB-4F8944BE4B26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28083E96-304A-4A5B-8D4F-EE8DB3A2727F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28083E96-304A-4A5B-8D4F-EE8DB3A2727F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28083E96-304A-4A5B-8D4F-EE8DB3A2727F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28083E96-304A-4A5B-8D4F-EE8DB3A2727F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E213E5F-A29D-4640-B130-FF4D1102F728}
+	EndGlobalSection
+EndGlobal
