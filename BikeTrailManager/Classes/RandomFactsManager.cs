@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BikeTrailManager.Classes
 {
@@ -14,8 +10,11 @@ namespace BikeTrailManager.Classes
         //returns random fact
         public static string GetRandomFact()
         {
-            if (randomFactsList.Count < 1) return "Błąd, brak danych.";
-            else return randomFactsList[new Random().Next(randomFactsList.Count)];
+            if (randomFactsList.Count < 1) 
+                return "Błąd, brak danych.";
+
+            else 
+                return randomFactsList[new Random().Next(randomFactsList.Count)];
         }
 
         //adding random facts to list

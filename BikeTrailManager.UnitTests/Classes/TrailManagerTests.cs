@@ -1,9 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BikeTrailManager.Classes;
 using System.Collections.Generic;
-using System;
 
-namespace BikeTrailManager.UnitTests
+namespace BikeTrailManager.UnitTests.Classes
 {
     [TestClass]
     public class TrailManagerTests

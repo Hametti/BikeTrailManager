@@ -50,10 +50,10 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TrailManagerTests.cs" />
-    <Compile Include="TrailTests.cs" />
+    <Compile Include="Classes\TrailManagerTests.cs" />
+    <Compile Include="Classes\TrailTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AddTrailControlTests.cs" />
+    <Compile Include="Controls\AddTrailControlTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

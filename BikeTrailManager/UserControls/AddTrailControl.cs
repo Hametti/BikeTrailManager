@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BikeTrailManager.Classes;
-using BikeTrailManager;
 
 namespace BikeTrailManager.UserControls
 {
@@ -138,6 +130,7 @@ namespace BikeTrailManager.UserControls
                     MessageBox.Show("Ilość godzin nie może być ujemna.");
                     return false;
                 }
+
                 if (Convert.ToDouble(Hours) > 4500)
                 {
                     MessageBox.Show("Ilość godzin jest za duża.");
@@ -162,11 +155,13 @@ namespace BikeTrailManager.UserControls
                     MessageBox.Show("Ilość minut nie może być większa niż 59.");
                     return false;
                 }
+
                 if (Convert.ToDouble(Minutes) < 0)
                 {
                     MessageBox.Show("Ilość minut nie może być ujemna.");
                     return false;
                 }
+
                 if (Convert.ToDouble(Minutes) == 0 && Convert.ToDouble(Hours) == 0)
                 {
                     MessageBox.Show("Całkowity czas nie może być równy zero.");
@@ -187,6 +182,7 @@ namespace BikeTrailManager.UserControls
                     MessageBox.Show("Twoja prędkość średnia nie może być większa niż 200 km/h");
                     return false;
                 }
+
                 DialogResult dialogResult = MessageBox.Show("Czy napewno dane sa poprawne? Twoja prędkość średnia to ponad 50 km/h", "Uwaga", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.No) return false;
             }
@@ -196,7 +192,8 @@ namespace BikeTrailManager.UserControls
             //
             try
             {
-                if (ElevationGain == "") ElevationGain = "0";
+                if (ElevationGain == "") 
+                    ElevationGain = "0";
             
 
                 if (Convert.ToInt32(ElevationGain) > 9279 || Convert.ToInt32(ElevationGain) < -9279)
@@ -217,7 +214,8 @@ namespace BikeTrailManager.UserControls
             //checks if day is a number in range of 1-31 and if day textbox isn't empty
             try
             {
-                if (Convert.ToInt32(Day) <= 0 || Convert.ToInt32(Day) > 31 || Day == "") throw new Exception();
+                if (Convert.ToInt32(Day) <= 0 || Convert.ToInt32(Day) > 31 || Day == "") 
+                    throw new Exception();
             }
             catch (Exception)
             {
@@ -232,7 +230,9 @@ namespace BikeTrailManager.UserControls
             //checks if month is a number in range of 1-12 and if month textbox isn't empty
             try
             {
-                if (Convert.ToInt32(Month) < 1 || Convert.ToInt32(Month) > 12 || Month == "") throw new Exception();
+                if (Convert.ToInt32(Month) < 1 || Convert.ToInt32(Month) > 12 || Month == "") 
+                    throw new Exception();
+
                 if (Convert.ToInt32(Month) == 2 && Convert.ToInt32(Day) > 29)
                 {
                     MessageBox.Show("Ten miesiąc nie ma tylu dni.");
@@ -252,7 +252,8 @@ namespace BikeTrailManager.UserControls
             //checks if year is a number in range of 2020-2100 and if year textbox isn't empty
             try
             {
-                if (Convert.ToInt32(Year) < 2020 || Convert.ToInt32(Year) > 2100 || Year == "") throw new Exception();
+                if (Convert.ToInt32(Year) < 2020 || Convert.ToInt32(Year) > 2100 || Year == "") 
+                    throw new Exception();
             }
             catch (Exception)
             {

@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BikeTrailManager.Classes
 {
@@ -31,7 +27,9 @@ namespace BikeTrailManager.Classes
         {
             Trail oldest = trailsList[0];
 
-            foreach (Trail obj in trailsList) if (obj.DaysPast2020() <= oldest.DaysPast2020()) oldest = obj;
+            foreach (Trail obj in trailsList) 
+                if (obj.DaysPast2020() <= oldest.DaysPast2020()) 
+                    oldest = obj;
 
             return oldest;
         }
@@ -41,7 +39,9 @@ namespace BikeTrailManager.Classes
         {
             Trail last = trailsList[0];
 
-            foreach (Trail obj in trailsList) if (obj.DaysPast2020() >= last.DaysPast2020()) last = obj;
+            foreach (Trail obj in trailsList) 
+                if (obj.DaysPast2020() >= last.DaysPast2020()) 
+                    last = obj;
 
             return last;
         }
@@ -49,10 +49,18 @@ namespace BikeTrailManager.Classes
         //returns season depending on trail date
         public static string FindTrailSeason(Trail obj)
         {
-            if ((obj.month > 3 && obj.month < 6) || (obj.month == 3 && obj.day > 20) || (obj.month == 6 && obj.day < 22)) return "Wiosna";
-            if ((obj.month > 6 && obj.month < 9) || (obj.month == 6 && obj.day > 21) || (obj.month == 9 && obj.day < 23)) return "Lato";
-            if ((obj.month > 9 && obj.month < 12) || (obj.month == 9 && obj.day > 22) || (obj.month == 12 && obj.day < 21)) return "Jesień";
-            if (obj.month < 3 || (obj.month == 3 && obj.day < 21) || (obj.month == 12 && obj.day > 20)) return "Zima";
+            if ((obj.month > 3 && obj.month < 6) || (obj.month == 3 && obj.day > 20) || (obj.month == 6 && obj.day < 22)) 
+                return "Wiosna";
+
+            if ((obj.month > 6 && obj.month < 9) || (obj.month == 6 && obj.day > 21) || (obj.month == 9 && obj.day < 23)) 
+                return "Lato";
+
+            if ((obj.month > 9 && obj.month < 12) || (obj.month == 9 && obj.day > 22) || (obj.month == 12 && obj.day < 21)) 
+                return "Jesień";
+
+            if (obj.month < 3 || (obj.month == 3 && obj.day < 21) || (obj.month == 12 && obj.day > 20)) 
+                return "Zima";
+
             return "";
         }
 
@@ -66,7 +74,8 @@ namespace BikeTrailManager.Classes
             //checks if list was already sorted
             for (int i = 0; i < trailsList.Count; i++)
                 for (int j = 0; j < trailsList.Count - 1; j++)
-                    if (trailsList[j].trailName[0] > trailsList[j + 1].trailName[0]) wasSorted = false;
+                    if (trailsList[j].trailName[0] > trailsList[j + 1].trailName[0]) 
+                        wasSorted = false;
 
             //sorts list from A-Z or Z-A depending on wasSorted variable
             for (int i = 0; i < trailsList.Count; i++)
@@ -99,7 +108,8 @@ namespace BikeTrailManager.Classes
 
             for (int i = 0; i < trailsList.Count; i++)
                 for (int j = 0; j < trailsList.Count - 1; j++)
-                    if (trailsList[j].distance > trailsList[j + 1].distance) wasSorted = false;
+                    if (trailsList[j].distance > trailsList[j + 1].distance) 
+                        wasSorted = false;
 
             for (int i = 0; i < trailsList.Count; i++)
                 for (int j = 0; j < trailsList.Count - 1; j++)
@@ -127,7 +137,8 @@ namespace BikeTrailManager.Classes
 
             for (int i = 0; i < trailsList.Count; i++)
                 for (int j = 0; j < trailsList.Count - 1; j++)
-                    if (trailsList[j].elevationGain > trailsList[j + 1].elevationGain) wasSorted = false;
+                    if (trailsList[j].elevationGain > trailsList[j + 1].elevationGain) 
+                        wasSorted = false;
 
             for (int i = 0; i < trailsList.Count; i++)
                 for (int j = 0; j < trailsList.Count - 1; j++)
@@ -155,7 +166,8 @@ namespace BikeTrailManager.Classes
 
             for (int i = 0; i < trailsList.Count; i++)
                 for (int j = 0; j < trailsList.Count - 1; j++)
-                    if (trailsList[j].DaysPast2020() > trailsList[j + 1].DaysPast2020()) wasSorted = false;
+                    if (trailsList[j].DaysPast2020() > trailsList[j + 1].DaysPast2020()) 
+                        wasSorted = false;
 
             for (int i = 0; i < trailsList.Count; i++)
                 for (int j = 0; j < trailsList.Count - 1; j++)
@@ -183,7 +195,8 @@ namespace BikeTrailManager.Classes
 
             for (int i = 0; i < trailsList.Count; i++)
                 for (int j = 0; j < trailsList.Count - 1; j++)
-                    if (trailsList[j].TimeInMinutes() > trailsList[j + 1].TimeInMinutes()) wasSorted = false;
+                    if (trailsList[j].TimeInMinutes() > trailsList[j + 1].TimeInMinutes()) 
+                        wasSorted = false;
 
             for (int i = 0; i < trailsList.Count; i++)
                 for (int j = 0; j < trailsList.Count - 1; j++)
@@ -233,7 +246,6 @@ namespace BikeTrailManager.Classes
                 file.Dispose();
                 file.Close();
             }
-            
         }
     }
 }

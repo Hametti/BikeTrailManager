@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BikeTrailManager.Classes
 {
@@ -50,51 +46,63 @@ namespace BikeTrailManager.Classes
         //counts all days past2020 to trail date, which is needed for sorting by date
         public int DaysPast2020()
         {
-            int daysPast2020 = 0 ;
+            int daysPast2020 = 0;
 
             //checks if year in trail date was a leap year and adds correct amount of days
-            for(int currentYear=2020; currentYear<year; currentYear++)
+            for (int currentYear = 2020; currentYear < year; currentYear++)
             {
-                if ((currentYear % 4 == 0 && currentYear % 100 != 0) || year % 400 == 0) daysPast2020 += 366;
+                if ((currentYear % 4 == 0 && currentYear % 100 != 0) || year % 400 == 0)
+                    daysPast2020 += 366;
+
                 else daysPast2020 += 365;
             }
 
             //returns correct amount of days in month, depending on which month is it
             switch (month)
             {
-                case 1:
-                    break;
                 case 2:
                     daysPast2020 += 31;
                     break;
+
                 case 3:
-                    if (((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) && month > 1) daysPast2020 += 60;
+                    if (((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) && month > 1) 
+                        daysPast2020 += 60;
+
                     else daysPast2020 += 59;
                     break;
+
                 case 4:
                     daysPast2020 += 90;
                     break;
+
                 case 5:
                     daysPast2020 += 120;
                     break;
+
                 case 6:
                     daysPast2020 += 151;
                     break;
+
                 case 7:
                     daysPast2020 += 181;
                     break;
+
                 case 8:
                     daysPast2020 += 212;
                     break;
+
                 case 9:
                     daysPast2020 += 243;
                     break;
+
                 case 10:
                     daysPast2020 += 273;
                     break;
+
                 case 11:
                     daysPast2020 += 304;
                     break;
+
                 case 12:
                     daysPast2020 += 334;
                     break;

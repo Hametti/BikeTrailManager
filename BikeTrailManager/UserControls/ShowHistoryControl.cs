@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BikeTrailManager.Classes;
 
@@ -40,6 +33,7 @@ namespace BikeTrailManager.UserControls
                     TrailsManager.SortByDate();
                     break;
             }
+
             UpdateTrailsListView();
         }
 
@@ -101,8 +95,11 @@ namespace BikeTrailManager.UserControls
         {
             if (trailsListView.SelectedItems.Count >= 1)
             {
-                if (showTrail) SetToDetailsMode();
-                else SetToHistoryMode();
+                if (showTrail) 
+                    SetToDetailsMode();
+
+                else 
+                    SetToHistoryMode();
             }
             else MessageBox.Show("Nie wybrano żadnej trasy.");
         }
@@ -138,6 +135,7 @@ namespace BikeTrailManager.UserControls
                     Refresh();
                 }
             }
+
             else MessageBox.Show("Nie wybrano żadnej trasy.");
         }
 

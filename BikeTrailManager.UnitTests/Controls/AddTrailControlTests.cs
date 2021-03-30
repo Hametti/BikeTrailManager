@@ -1,9 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using BikeTrailManager.UserControls;
-using BikeTrailManager.Classes;
 
-namespace BikeTrailManager.UnitTests
+namespace BikeTrailManager.UnitTests.Controls
 {
     //Uncomment TestClass if you want to test methods with message boxes
     //[TestClass]

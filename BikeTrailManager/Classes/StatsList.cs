@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BikeTrailManager.Classes
 {
@@ -54,15 +50,21 @@ namespace BikeTrailManager.Classes
 
             foreach (Trail obj in trailsList)
             {
-                if (obj.distance > distance) distance = obj.distance;
+                if (obj.distance > distance) 
+                    distance = obj.distance;
+
                 if (obj.TimeInMinutes() > timeInMinutes)
                 {
                     hours = obj.hours;
                     minutes = obj.minutes;
                     timeInMinutes = 60 * hours + minutes;
                 }
-                if (obj.elevationGain > elevGain) elevGain = obj.elevationGain;
-                if (obj.TrailAvgSpeed() > avgSpeed) avgSpeed = obj.TrailAvgSpeed();
+
+                if (obj.elevationGain > elevGain) 
+                    elevGain = obj.elevationGain;
+
+                if (obj.TrailAvgSpeed() > avgSpeed) 
+                    avgSpeed = obj.TrailAvgSpeed();
             }
 
             //rounding values for labels clearness
@@ -73,17 +75,25 @@ namespace BikeTrailManager.Classes
         public static void FindMinValuesIn(List<Trail> trailsList)
         {
             AddSomeValuesFrom(trailsList);
+
             foreach (Trail obj in trailsList)
             {
-                if (obj.distance < distance) distance = obj.distance;
+                if (obj.distance < distance) 
+                    distance = obj.distance;
+
                 if (obj.TimeInMinutes() < timeInMinutes)
                 {
                     hours = obj.hours;
                     minutes = obj.minutes;
                 }
-                if (obj.elevationGain < elevGain) elevGain = obj.elevationGain;
-                if (obj.TrailAvgSpeed() < avgSpeed) avgSpeed = obj.TrailAvgSpeed();
+
+                if (obj.elevationGain < elevGain) 
+                    elevGain = obj.elevationGain;
+
+                if (obj.TrailAvgSpeed() < avgSpeed) 
+                    avgSpeed = obj.TrailAvgSpeed();
             }
+
             RoundDoubleValues();
         }
 
